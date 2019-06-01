@@ -1,48 +1,40 @@
 <template>
   <v-app>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-tile
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-tile-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title v-text="item.title" />
-          </v-list-tile-content>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
-    <v-toolbar
-      :clipped-left="clipped"
-      fixed
-      app
-    >
-      <v-toolbar-side-icon @click="drawer = !drawer" />
-      <v-toolbar-title v-text="title" />
-    </v-toolbar>
     <v-content>
       <v-container>
         <nuxt />
       </v-container>
     </v-content>
-    <v-footer
-      :fixed="fixed"
-      app
-    >
-      <span>&copy; 2019</span>
-    </v-footer>
+    <v-bottom-nav
+        :active.sync="bottomNav"
+        :value="true"
+        fixed
+        >
+        <v-btn
+          color="blue"
+          flat
+          value="nearby"
+        >
+          <span>さがす</span>
+          <v-icon>maps</v-icon>
+        </v-btn>
+        <v-btn
+          color="blue"
+          flat
+          value="favorites"
+        >
+          <span>のこす</span>
+          <v-icon>create</v-icon>
+        </v-btn>
+        <v-btn
+          color="blue"
+          flat
+          value="recent"
+        >
+          <span>みかえす</span>
+          <v-icon>history</v-icon>
+        </v-btn>
+    </v-bottom-nav>
   </v-app>
 </template>
 
@@ -56,18 +48,18 @@ export default {
       items: [
         {
           icon: 'maps',
-          title: 'あそびばをみつける',
+          title: 'みつける',
           to: '/'
         },
         {
           icon: 'create',
-          title: '記録を残す',
+          title: 'のこす',
           to: '/create'
         },
         {
           icon: 'list_alt',
-          title: '記録を見る',
-          to: '/shows'
+          title: 'みかえす',
+          to: '/history'
         }
 
       ],
