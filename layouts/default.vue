@@ -13,10 +13,10 @@
         <v-btn
           color="blue"
           flat
-          value="maps"
+          value="place"
         >
           <span>さがす</span>
-          <v-icon>maps</v-icon>
+          <v-icon>map</v-icon>
         </v-btn>
         <v-btn
           color="blue"
@@ -46,7 +46,7 @@ export default {
       drawer: false,
       fixed: true,
       title: 'まちあるき',
-      bottomNav: 'maps'
+      bottomNav: 'place'
     }
   }
 }
