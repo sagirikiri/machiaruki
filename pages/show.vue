@@ -1,0 +1,20 @@
+<template>
+    <v-app>
+        <v-autocomplete
+            v-model="model"
+            :items="items"
+            :loading="isLoading"
+            :search-input.sync="search"
+            color="white"
+            item-text="Description"
+            item-value="API"
+            cache-items
+            hide-no-data
+            hide-selected
+            placeholder="入力できます"
+            prepend-icon="mdi-database-search"
+            return-object>
+        </v-autocomplete>
+        
+    </v-app>
+</template>
