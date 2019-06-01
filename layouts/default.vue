@@ -13,7 +13,7 @@
         <v-btn
           color="blue"
           flat
-          value="nearby"
+          value="maps"
         >
           <span>さがす</span>
           <v-icon>maps</v-icon>
@@ -21,7 +21,7 @@
         <v-btn
           color="blue"
           flat
-          value="favorites"
+          value="write"
         >
           <span>のこす</span>
           <v-icon>create</v-icon>
@@ -44,29 +44,9 @@ export default {
     return {
       clipped: false,
       drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'maps',
-          title: 'みつける',
-          to: '/'
-        },
-        {
-          icon: 'create',
-          title: 'のこす',
-          to: '/create'
-        },
-        {
-          icon: 'list_alt',
-          title: 'みかえす',
-          to: '/history'
-        }
-
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'まちあるき'
+      fixed: true,
+      title: 'まちあるき',
+      bottomNav: 'maps'
     }
   }
 }
