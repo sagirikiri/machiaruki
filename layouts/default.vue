@@ -13,25 +13,33 @@
         <v-btn
           color="blue"
           flat
-          value="place"
+          value="search"
+          to="/"
         >
-          <span>さがす</span>
-          <v-icon>map</v-icon>
+          <v-icon>search</v-icon>
+        </v-btn>
+        <v-btn
+          color="blue"
+          flat
+          value="favorite"
+          to="/favorite"
+        >
+          <v-icon>favorite</v-icon>
         </v-btn>
         <v-btn
           color="blue"
           flat
           value="write"
+          to="/create"
         >
-          <span>のこす</span>
           <v-icon>create</v-icon>
         </v-btn>
         <v-btn
           color="blue"
           flat
           value="recent"
+          to="/history"
         >
-          <span>みかえす</span>
           <v-icon>history</v-icon>
         </v-btn>
     </v-bottom-nav>
@@ -46,7 +54,7 @@ export default {
       drawer: false,
       fixed: true,
       title: 'まちあるき',
-      bottomNav: 'place'
+      bottomNav: 'search'
     }
   }
 }

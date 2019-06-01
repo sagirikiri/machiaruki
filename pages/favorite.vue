@@ -7,7 +7,7 @@
 export default {
   data() {
     return {  
-      bottomNav: 'write'
+      bottomNav: 'favorite'
     }
   }
 }
